@@ -1,0 +1,47 @@
+.projects {
+    margin-bottom: 64px;
+}
+
+.swiper-container {
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.project-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.swiper-button-unique-next,
+.swiper-button-unique-prev {
+    position: absolute;
+    top: 50%;
+}
+
+.swiper-button-unique-next {
+    cursor: pointer;
+    right: -70px;
+}
+
+.swiper-button-unique-prev {
+    cursor: pointer;
+    left: -70px;
+}
+
+.model-info-wrapper__icon {
+    stroke: black;
+}
