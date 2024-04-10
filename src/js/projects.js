@@ -1,6 +1,9 @@
 import Swiper from 'swiper';
 import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 let params = {
     modules: [Navigation, Mousewheel, Keyboard],
 
@@ -14,7 +17,7 @@ let params = {
 
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-unique-prev',
     },
 }
 const swiper = new Swiper('.swiper-container', params);
