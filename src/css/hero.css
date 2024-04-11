@@ -1,0 +1,46 @@
+
+
+/* ===============MOBILE STYLES================ */
+.hero-section{
+    background-image: url(../img/hero/mobile/mobile-hero-background-1x.png);
+    background-repeat: no-repeat;
+    height: 812px;
+    padding-top: 281px;
+    padding-bottom: 32px;
+}
+
+.hero-title{
+color: rgb(250, 250, 250);
+font-size: 50px;
+font-weight: 500;
+line-height: 50px;
+text-align: left;
+text-transform: uppercase;
+margin-bottom: 212px;
+
+}
+
+.hero-social-list{
+    display: flex;
+    gap: 4px;
+    
+}
+.hero-list-item{
+    box-sizing: border-box;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    width: 37px;
+    height: 37px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px 8px 10px 8px;
+
+}
+
+.email{
+width: 178px;
+height: 37px;
+padding: 10px 12px 10px 12px;
+}
