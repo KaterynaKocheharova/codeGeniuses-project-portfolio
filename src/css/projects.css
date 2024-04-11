@@ -2,46 +2,219 @@
     margin-bottom: 64px;
 }
 
+.projects-title {
+    margin-bottom: 32px;
+    text-align: left;
+    text-transform: uppercase;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -2%;
+
+    color: #fafafa66;
+}
+
 .swiper-container {
-    position: relative;
-    margin: 0 auto;
-    width: 800px;
-    height: 300px;
     overflow: hidden;
 }
 
-.swiper-wrapper {}
-
-.swiper-slide {
-    width: 300px;
-    margin: 0 auto;
+.swiper-wrapper {
+    margin-bottom: 32px;
 }
 
-.project-wrapper {
+@media (min-width: 1439px) {
+    .project-wrapper {
+        display: flex;
+    }
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+@media (min-width: 767px) {
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 64px 130px 64px 64px;
+    }
+}
+
+@media (min-width: 1439px) {
+    .info-wrapper {
+        display: flex;
+        padding: 64px 130px 64px 64px;
+        max-width: 686px;
+    }
+}
+
+.info-wrapper:nth-child(1) {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    background-color: #ffffff;
+    color: #1C1D20;
+}
+
+@media (min-width: 1439px) {
+    .info-wrapper:nth-child(1) {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+.info-wrapper:nth-child(2) {
+    padding: 100px 16px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+
+    background-color: #242527;
+    color: #1C1D20;
+}
+
+@media (min-width: 767px) {
+    .info-wrapper:nth-child(2) {
+        padding: 120px 45px;
+    }
+}
+
+@media (min-width: 1439px) {
+    .info-wrapper:nth-child(2) {
+        padding: 120px 36px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 42px;
+    margin-bottom: 96px;
+}
+
+@media (min-width: 767px) {
+    .stack-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 42px;
+        margin-bottom: 162px;
+    }
+}
+
+.stack-list__item:nth-of-type(4) {
+    flex-basis: 100%;
+}
+
+.stack-list__txt {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.18;
+}
+
+@media (min-width: 767px) {
+    .stack-list__txt {
+        white-space: nowrap;
+        line-height: 1.05;
+    }
+}
+
+.project-wrapper__txt {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+@media (min-width: 767px) {
+    .project-wrapper__txt {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1.02;
+    }
+}
+
+@media (min-width: 1439px) {
+    .project-wrapper__txt {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1.02;
+    }
+}
+
+.project-wrapper__link {
+    display: inline-block;
+    max-width: 142px;
+    padding: 14px 32px;
+    border-radius: 60px;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+
+    background: rgb(237, 59, 68);
+    color: #ffffff;
+}
+
+@media (min-width: 767px) {
+    .project-wrapper__link {
+        max-width: 184px;
+        padding: 18px 50px;
+    }
+}
+
+.buttons-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 300px;
-    border: 2px solid black;
+    gap: 12px;
 }
 
-.swiper-button-unique-next,
-.swiper-button-unique-prev {
-    position: absolute;
-    top: 50%;
+@media (min-width: 767px) {
+    .buttons-wrapper {
+        gap: 20px;
+    }
 }
 
-.swiper-button-unique-next {
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+    padding: 14px 14px 10px 14px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 50%;
     cursor: pointer;
-    right: -70px;
 }
 
-.swiper-button-unique-prev {
-    cursor: pointer;
-    left: -70px;
+@media (min-width: 767px) {
+
+    .custom-swiper-button-prev,
+    .custom-swiper-button-next {
+        padding: 18px 18px 14px 18px;
+    }
 }
 
-.model-info-wrapper__icon {
-    stroke: black;
+.swiper-button-prev__icon,
+.swiper-button-next__icon {
+    stroke: #ffffff;
+    fill: none;
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 767px) {
+
+    .swiper-button-prev__icon,
+    .swiper-button-next__icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
