@@ -229,22 +229,6 @@
     transition: 0.5s;
 }
 
-.custom-swiper-btn-next:hover {
-    border: 1px solid rgba(250, 250, 250, 0.855);
-}
-
-.custom-swiper-btn-next:active {
-    border: 1px solid rgba(156, 156, 156, 0.755);
-}
-
-.custom-swiper-btn-prev:hover {
-    border: 1px solid rgba(250, 250, 250, 0.855);
-}
-
-.custom-swiper-btn-prev:active {
-    border: 1px solid rgba(156, 156, 156, 0.755);
-}
-
 @media screen and (min-width: 768px) {
 
     .custom-swiper-btn-prev,
