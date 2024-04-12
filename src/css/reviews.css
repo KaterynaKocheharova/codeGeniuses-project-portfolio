@@ -23,6 +23,12 @@
   margin-bottom: 32px;
 }
 
+@media screen and (min-width: 768px) {
+  .reviews-list {
+    display: flex;
+  }
+}
+
 .reviews-item {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
@@ -68,6 +74,10 @@
   .buttons-wrapper {
     gap: 20px;
   }
+}
+
+.swiper-container {
+  overflow: hidden;
 }
 
 .custom-swiper-button-prev,

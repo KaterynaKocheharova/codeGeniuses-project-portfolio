@@ -37,10 +37,21 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
 }
 
 function initSwiper() {
+  const breakpoints = {
+    375: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
+  };
+
   let params = {
     modules: [Navigation, Mousewheel, Keyboard],
-    slidesPerView: 'auto',
-    spaceBetween: 100,
+    spaceBetween: 16,
     loop: false,
     centeredSlides: true,
     direction: 'horizontal',
@@ -51,6 +62,7 @@ function initSwiper() {
       nextEl: '.custom-swiper-button-next',
       prevEl: '.custom-swiper-button-prev',
     },
+    breakpoints: breakpoints,
     on: {
       init: function () {
         this.navigation.prevEl.setAttribute(
@@ -79,19 +91,20 @@ function initSwiper() {
     },
   };
 
-  // const buttonsMarkup = `<div class="buttons-wrapper">
-  //         <div class="custom-swiper-button-prev">
-  //           <svg class="swiper-button-prev__icon" width="32" height="32">
-  //             <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
-  //           </svg>
-  //         </div>
-  //         <div class="custom-swiper-button-next">
-  //           <svg class="swiper-button-next__icon" width="32" height="32">
-  //             <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
-  //           </svg>
-  //         </div>
-  //       </div>`;
-
   const reviewsSwiper = new Swiper('.swiper-container', params);
-  // reviewsList.insertAdjacentHTML('afterend', buttonsMarkup);
 }
+
+// const buttonsMarkup = `<div class="buttons-wrapper">
+//         <div class="custom-swiper-button-prev">
+//           <svg class="swiper-button-prev__icon" width="32" height="32">
+//             <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
+//           </svg>
+//         </div>
+//         <div class="custom-swiper-button-next">
+//           <svg class="swiper-button-next__icon" width="32" height="32">
+//             <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
+//           </svg>
+//         </div>
+//       </div>`;
+
+// reviewsList.insertAdjacentHTML('afterend', buttonsMarkup);
