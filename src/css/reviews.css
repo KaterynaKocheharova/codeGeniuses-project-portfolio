@@ -1,14 +1,18 @@
 .reviews-section {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .reviews-section {
+    margin-bottom: 96px;
   }
-} */
+}
 
-/* @media screen and (min-width: 1440px) {
-} */
+@media screen and (min-width: 1440px) {
+  .reviews-section {
+    margin-bottom: 164px;
+  }
+}
 
 .section-title {
   font-weight: 600;
