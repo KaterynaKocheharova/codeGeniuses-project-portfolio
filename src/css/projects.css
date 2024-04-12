@@ -1,5 +1,6 @@
 .projects {
     margin-bottom: 64px;
+    user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -26,6 +27,8 @@
 
 .swiper-container {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .swiper-wrapper {
@@ -205,36 +208,53 @@
     }
 }
 
-.buttons-wrapper {
+.btns-wrapper {
     display: flex;
     justify-content: center;
     gap: 12px;
 }
 
 @media screen and (min-width: 768px) {
-    .buttons-wrapper {
+    .btns-wrapper {
         gap: 20px;
     }
 }
 
-.custom-swiper-button-prev,
-.custom-swiper-button-next {
-    padding: 14px 14px 10px 14px;
+.custom-swiper-btn-prev,
+.custom-swiper-btn-next {
+    padding: 14px 14px 14px 14px;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 50%;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.custom-swiper-btn-next:hover {
+    border: 1px solid rgba(250, 250, 250, 0.855);
+}
+
+.custom-swiper-btn-next:active {
+    border: 1px solid rgba(156, 156, 156, 0.755);
+}
+
+.custom-swiper-btn-prev:hover {
+    border: 1px solid rgba(250, 250, 250, 0.855);
+}
+
+.custom-swiper-btn-prev:active {
+    border: 1px solid rgba(156, 156, 156, 0.755);
 }
 
 @media screen and (min-width: 768px) {
 
-    .custom-swiper-button-prev,
-    .custom-swiper-button-next {
-        padding: 18px 18px 14px 18px;
+    .custom-swiper-btn-prev,
+    .custom-swiper-btn-next {
+        padding: 18px 18px 18px 18px;
     }
 }
 
-.swiper-button-prev-icon,
-.swiper-button-next-icon {
+.swiper-btn-prev-icon,
+.swiper-btn-next-icon {
     stroke: #ffffff;
     fill: none;
     width: 24px;
@@ -243,8 +263,8 @@
 
 @media screen and (min-width: 768px) {
 
-    .swiper-button-prev-icon,
-    .swiper-button-next-icon {
+    .swiper-btn-prev-icon,
+    .swiper-btn-next-icon {
         width: 32px;
         height: 32px;
     }

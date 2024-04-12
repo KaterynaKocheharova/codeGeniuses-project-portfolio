@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 let params = {
-    modules: [Navigation, Mousewheel, Keyboard
+    modules: [Navigation, Mousewheel, Keyboard,
     ],
 
     slidesPerView: 'auto',
@@ -19,8 +19,8 @@ let params = {
     keyboard: true,
 
     navigation: {
-        nextEl: '.custom-swiper-button-next',
-        prevEl: '.custom-swiper-button-prev',
+        nextEl: '.custom-swiper-btn-next',
+        prevEl: '.custom-swiper-btn-prev',
     },
     on: {
         init: function () {
