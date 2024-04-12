@@ -1,6 +1,6 @@
-/* .reviews-section {
-  margin-bottom: ...
-} */
+.reviews-section {
+  margin-bottom: 32px;
+}
 
 /* @media screen and (min-width: 768px) {
   .reviews-section {
@@ -37,6 +37,7 @@
 }
 
 .reviews-image {
+  border-radius: 10px;
   margin-bottom: 32px;
 }
 
