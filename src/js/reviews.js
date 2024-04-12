@@ -53,7 +53,7 @@ function initSwiper() {
     modules: [Navigation, Mousewheel, Keyboard],
     spaceBetween: 16,
     loop: false,
-    centeredSlides: true,
+    // centeredSlides: true,
     direction: 'horizontal',
     mousewheel: true,
     keyboard: true,
