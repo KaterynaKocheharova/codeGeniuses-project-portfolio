@@ -93,18 +93,3 @@ function initSwiper() {
 
   const reviewsSwiper = new Swiper('.swiper-container', params);
 }
-
-// const buttonsMarkup = `<div class="buttons-wrapper">
-//         <div class="custom-swiper-button-prev">
-//           <svg class="swiper-button-prev__icon" width="32" height="32">
-//             <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
-//           </svg>
-//         </div>
-//         <div class="custom-swiper-button-next">
-//           <svg class="swiper-button-next__icon" width="32" height="32">
-//             <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
-//           </svg>
-//         </div>
-//       </div>`;
-
-// reviewsList.insertAdjacentHTML('afterend', buttonsMarkup);
