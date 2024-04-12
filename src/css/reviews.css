@@ -1,12 +1,9 @@
-.reviews-section {
-  padding-top: 21px;
-  padding-bottom: 48px;
-}
+/* .reviews-section {
+  margin-bottom: ...
+} */
 
 @media screen and (min-width: 768px) {
   .reviews-section {
-    padding-top: 24px;
-    padding-bottom: 90.5px;
   }
 }
 
@@ -28,6 +25,7 @@
 
 .reviews-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -51,7 +49,7 @@
   }
 }
 
-@media screen and (min-width: 1440) {
+@media screen and (min-width: 1440px) {
   .reviews-item {
     width: calc((100% - 16px * 3) / 4);
   }
