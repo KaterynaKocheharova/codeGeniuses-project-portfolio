@@ -32,6 +32,12 @@
     margin-bottom: 32px;
 }
 
+@media screen and (min-width: 768px) {
+    .swiper-wrapper {
+        margin-bottom: 62px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .project-wrapper {
         display: flex;
@@ -121,7 +127,7 @@
     .stack-list {
         display: flex;
         flex-wrap: nowrap;
-        margin-bottom: 162px;
+        margin-bottom: 164px;
     }
 }
 
@@ -151,7 +157,6 @@
 
 @media screen and (min-width: 768px) {
     .stack-list-txt {
-        white-space: nowrap;
         line-height: 1.05;
     }
 }
