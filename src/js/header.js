@@ -5,10 +5,6 @@ const closeBtn = document.querySelector('.close-btn');
 const dropdownBtn = document.querySelector('.dropdown-btn-menu');
 const dropdownMenu = document.getElementById('menu');
 const mobMenuText = document.querySelectorAll('.mob-menu-text');
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 const mobMenuBtn = document.querySelector('.mob-menu-button-order');
 
 socialLink.addEventListener('click', e => {
