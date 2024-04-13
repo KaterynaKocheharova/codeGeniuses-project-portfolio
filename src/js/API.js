@@ -15,4 +15,3 @@ export async function sendInfo(clientInfo) {
   const res = await axios.post(url, clientInfo);
   return res.data;
 }
-

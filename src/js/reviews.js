@@ -10,10 +10,22 @@ const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 
 onCreateReview();
 async function onCreateReview() {
-  const reviews = await getReviews();
-  const reviewsMarkup = reviewsTemplate(reviews);
-  reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
-  initSwiper();
+  try {
+    const reviews = await getReviews();
+    const reviewsMarkup = reviewsTemplate(reviews);
+    reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
+    initSwiper();
+  } catch (error) {
+    iziToast.show({
+      title: `@{error}`,
+      titleColor: 'rgba(250, 250, 250, 0.6)',
+      titleLineHeight: '1.2',
+      message: 'Sorry. There is an error with the request',
+      messageColor: 'rgba(250, 250, 250, 0.6)',
+      backgroundColor: 'rgb(237, 59, 68)',
+    });
+    reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
+  }
 }
 
 function reviewsTemplate(arr) {
