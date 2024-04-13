@@ -44,17 +44,18 @@
 
 .input-field {
   outline: none;
-  max-width: 343px;
-  height: 44px;
+  padding-bottom: 20px;
+  padding-top: 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  border-bottom: 1px solid #fafafa20;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+  color: #fafafa;
+  width: 100%;
 }
 
 .submit-button {
