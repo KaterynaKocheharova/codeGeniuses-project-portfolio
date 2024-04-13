@@ -40,6 +40,7 @@
     font: 500 16px "Inter Tight", sans-serif;
     margin-top: 16px;
     padding: 0;
+    line-height: 1.5;
 }
 
 .ac .ac-trigger.faq-btn::after {
@@ -52,6 +53,7 @@
 
 .button-text {
     max-width: 289px;
+    line-height: 1.5;
 }
 
 .arrow-icon-container {
