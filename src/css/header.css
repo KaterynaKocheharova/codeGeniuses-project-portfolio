@@ -176,7 +176,7 @@
 
 .dropdown-content {
     position: absolute;
-    top: -400px;
+    top: 10px;
     left: -13px;
     list-style-type: none;
     padding: 8px 0;
@@ -200,11 +200,9 @@
 
 .dropdown-content.show {
     opacity: 1;
-    top: 30px;
+    top: 20px;
 }
 
-
-/* ///////////////////////////////////////////////////////////////////////// */
 
 
 @media screen and (min-width: 768px) {
