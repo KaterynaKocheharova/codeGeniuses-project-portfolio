@@ -34,6 +34,8 @@ ul {
     width: 48px;
     height: 48px;
     margin-bottom: 64px;
+    border-radius: 10px;
+
 }
 
 
@@ -58,6 +60,33 @@ ul {
     align-items: flex-start;
     gap: 16px;
 }
+
+.benefit {
+    background-color: #242527;
+    border-radius: 20px;
+}
+
+.title-benefits {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.text-benefits {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.order-button {
+    max-width: 142px;
+    padding: 14px 32px;
+    border-radius: 60px;
+    color: #fafafa;
+    font-size: 16px;
+    background: #242527;
+    white-space: nowrap;
+}
+
 
 
 
