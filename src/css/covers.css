@@ -1,137 +1,114 @@
-body {
-    margin: 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+}
+
+.film {
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+}
+
+.film-line {
+  list-style: none;
+  height: 314px;
+  display: flex;
+  transform: rotate(16deg);
+}
+
+.film-element {
+  flex-shrink: 0;
+  margin-right: 20px;
+  margin-bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 544px;
+  white-space: nowrap;
+  animation-name: filmLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes filmLine {
+  from {
+    transform: translateX(-20%);
   }
-    
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+
+  to {
+    transform: translateX(-180%);
   }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  
-  .content {
-    position: relative;
-  }
-  
-  .film {
-    position: absolute;
-    right: -800px;
-    left: 0;
-    overflow: hidden;
-  }
-    
-  .film-line {
-    list-style: none;
-    height: 314px;
-    display: flex;
-    transform: rotate(16deg);
-  }
-    
-  .film-element {
-    flex-shrink: 0;
-    margin-right: 20px; 
-    margin-bottom: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 544px; 
-    white-space: nowrap;
-    animation-name: filmLine;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-    
-  @keyframes filmLine {
-    from {
-      transform: translateX(-20%);
-    }
-      
-    to {
-      transform: translateX(-180%);
-    }
-  } 
-    
-  
-  /* ==================== MOBILE ============================ */
-  
-  .content {
-    max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+}
+
+/* ==================== MOBILE ============================ */
+
+.content {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-covers {
+  background-color: black;
+  background-image: url('../images/covers/backgrounds/covers-background-mobile-1x-min.png');
+}
+
+@media (min-resolution: 192dpi) {
   .section-covers {
-    background-color: black;
-    background-image: url("../images/covers/backgrounds/covers-background-mobile-1x-min.png");
+    background-image: url('../images/covers/backgrounds/covers-background-mobile-2x-min.png');
   }
-  
+}
+
+/* =================== TABLET =============================*/
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .content {
+    min-width: 768px;
+  }
+
+  .section-covers {
+    min-width: 768px;
+    min-height: 960px;
+    background-image: url('../images/covers/backgrounds/covers-background-tablet-1x-min.png');
+  }
+
   @media (min-resolution: 192dpi) {
     .section-covers {
-      background-image: url("../images/covers/backgrounds/covers-background-mobile-2x-min.png");
+      background-image: url('../images/covers/backgrounds/covers-background-tablet-2x-min.png');
     }
-  
   }
-  
-  /* =================== TABLET =============================*/
-  
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
-  
-    .content {
-      min-width: 768px;
-    }
-  
+}
+
+/* ================== DESKTOP ============================*/
+
+@media screen and (min-width: 1440px) {
+  .content {
+    min-width: 1440px;
+  }
+
+  .section-covers {
+    min-height: 960px;
+    min-width: 1440px;
+    background-image: url('../images/covers/backgrounds/covers-background-desktop-1x-min.png');
+  }
+
+  @media (min-resolution: 192dpi) {
     .section-covers {
-      min-width: 768px;
-      min-height: 960px;
-      background-image: url("../images/covers/backgrounds/covers-background-tablet-1x-min.png");
+      background-image: url('../images/covers/backgrounds/covers-background-desktop-2x-min.png');
     }
-  
-    @media (min-resolution: 192dpi) {
-      .section-covers {
-        background-image: url("../images/covers/backgrounds/covers-background-tablet-2x-min.png");
-      }
-    }
-  
   }
-  
-  
-  /* ================== DESKTOP ============================*/
-  
-  @media screen and (min-width: 1440px) {
-  
-    .content {
-      min-width: 1440px;
-    }
-  
-    .section-covers {
-      min-height: 960px;
-      min-width: 1440px;
-      background-image: url("../images/covers/backgrounds/covers-background-desktop-1x-min.png");
-    }
-  
-    @media (min-resolution: 192dpi) {
-      .section-covers {
-        background-image: url("../images/covers/backgrounds/covers-background-desktop-2x-min.png");
-      }
-    }
-  
-  }
+}
