@@ -65,7 +65,6 @@ function initSwiper() {
 
   let params = {
     modules: [Navigation, Mousewheel, Keyboard],
-    slidesPerView: 'auto',
     spaceBetween: 16,
     loop: false,
     direction: 'horizontal',
