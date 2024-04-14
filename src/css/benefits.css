@@ -23,11 +23,10 @@ ul {
 }
 
 
-.icon {
+.icon-benefits {
     stroke: #fafafa;
-
+    fill: none;
 }
-
 
 .benefit-icons {
     background-color: #ED3B44;
