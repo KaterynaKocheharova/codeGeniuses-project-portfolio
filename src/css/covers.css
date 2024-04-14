@@ -1,3 +1,7 @@
+.sections-covers {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -20,39 +24,38 @@
   right: -100px;
   left: -200px;
 }
-  
+
 .film-line {
   list-style: none;
   height: 163px;
   display: flex;
   transform: rotate(16deg);
 }
-  
+
 .film-element {
   flex-shrink: 0;
-  margin-right: 20px; 
+  margin-right: 20px;
   margin-bottom: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 282px; 
+  width: 282px;
   white-space: nowrap;
   animation-name: filmLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-  
+
 @keyframes filmLine {
   from {
     transform: translateX(-20%);
   }
-    
+
   to {
     transform: translateX(-180%);
   }
-} 
-  
+}
 
 /* ==================== MOBILE ============================ */
 
@@ -66,20 +69,18 @@
   min-width: 375px;
   min-height: 504px;
   background-color: #444444;
-  background-image: url("../img/covers/backgrounds/covers-background-mobile-1x-min.png");
+  background-image: url('../img/covers/backgrounds/covers-background-mobile-1x-min.png');
 }
 
 @media (min-resolution: 192dpi) {
   .section-covers {
-    background-image: url("../img/covers/backgrounds/covers-background-mobile-2x-min.png");
+    background-image: url('../img/covers/backgrounds/covers-background-mobile-2x-min.png');
   }
-
 }
 
 /* =================== TABLET =============================*/
 
 @media screen and (min-width: 768px) and (max-width: 1440px) {
-
   .content {
     min-width: 768px;
   }
@@ -92,27 +93,22 @@
     width: 544px;
   }
 
-
-
   .section-covers {
     min-width: 768px;
     min-height: 960px;
-    background-image: url("../img/covers/backgrounds/covers-background-tablet-1x-min.png");
+    background-image: url('../img/covers/backgrounds/covers-background-tablet-1x-min.png');
   }
 
   @media (min-resolution: 192dpi) {
     .section-covers {
-      background-image: url("../img/covers/backgrounds/covers-background-tablet-2x-min.png");
+      background-image: url('../img/covers/backgrounds/covers-background-tablet-2x-min.png');
     }
   }
-
 }
-
 
 /* ================== DESKTOP ============================*/
 
 @media screen and (min-width: 1440px) {
-
   .content {
     min-width: 1440px;
   }
@@ -120,13 +116,12 @@
   .section-covers {
     min-height: 960px;
     min-width: 1440px;
-    background-image: url("../img/covers/backgrounds/covers-background-desktop-1x-min.png");
+    background-image: url('../img/covers/backgrounds/covers-background-desktop-1x-min.png');
   }
 
   @media (min-resolution: 192dpi) {
     .section-covers {
-      background-image: url("../img/covers/backgrounds/covers-background-desktop-2x-min.png");
+      background-image: url('../img/covers/backgrounds/covers-background-desktop-2x-min.png');
     }
   }
-
 }
