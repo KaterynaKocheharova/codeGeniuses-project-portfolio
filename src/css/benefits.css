@@ -84,7 +84,7 @@ ul {
     font-size: 16px;
     font-weight: 500;
     text-align: left;
-    width: 296px;
+    width: 284px;
 }
 
 .order-button {
@@ -97,6 +97,7 @@ ul {
     border: 1px solid rgba(250, 250, 250, .5);
     border-radius: 60px;
     margin-top: 32px;
+    letter-spacing: 0, 02em;
 }
 
 
@@ -125,7 +126,12 @@ ul {
     }
 
     .text-benefits {
-        width: 284px;
+        width: 296px;
+
+    }
+
+    .order-button {
+        margin-top: 64px;
     }
 }
 
