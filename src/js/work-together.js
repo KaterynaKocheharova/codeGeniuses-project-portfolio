@@ -45,7 +45,7 @@ form.addEventListener('submit', async event => {
   event.preventDefault();
   const { email, comment } = event.target.elements;
   try {
-    const response = await apiPost(email.value, comment.value);
+    const response = await getReviews(email.value, comment.value);
     console.log(response);
     if (response) {
       modalWindow.render(response.title, response.message);
