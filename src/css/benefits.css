@@ -159,5 +159,6 @@ ul {
 
     .titl {
         margin-right: 400px;
+        white-space: nowrap;
     }
 }
