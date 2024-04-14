@@ -25,18 +25,18 @@
     color: #fafafa66;
 }
 
-.swiper-container {
+.projects-swiper-container {
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
-.swiper-wrapper {
+.projects-swiper-wrapper {
     margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
-    .swiper-wrapper {
+    .projects-swiper-wrapper {
         margin-bottom: 62px;
     }
 }
