@@ -1,4 +1,4 @@
-import apiPost from './API';
+import { getReviews } from './API';
 import modalWindow from './modal-window';
 const form = document.querySelector('.form-section');
 const emailInput = document.querySelector('input[name="email"]');
