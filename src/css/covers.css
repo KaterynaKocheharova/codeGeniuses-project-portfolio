@@ -1,3 +1,7 @@
+.section-covers {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
