@@ -35,31 +35,12 @@ let parametrs = {
     },
     1440: {
       slidesPerView: 6,
-      //   slidesOffsetBefore: 200,
-      //   loopAdditionalSlides: 6,
-      //   slidesOffsetAfter: 100,
-      //   slidesOffsetBefore: 100,
-      //   centerInsufficientSlides: true,
-      //   centeredSlides: true,
-      //   centeredSlidesBounds: true,
     },
   },
 
   navigation: {
     nextEl: '.about-me-swiper-btn-next',
   },
-
-  //   remove: {
-  //     init: function () {
-  //       document
-  //         .querySelector('.swiper-button-next')
-  //         .classList.remove('swiper-button-lock');
-  //     },
-  //   },
 };
 
 const aboutMeSwiper = new SwiperAbout('.about-me-swiper-container', parametrs);
-
-aboutMeSwiper.on('slideChange', function () {
-  console.log('Real index of currently active slide:', aboutMeSwiper.realIndex);
-});
