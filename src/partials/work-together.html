@@ -1,40 +1,67 @@
-<footer class="footer-section">
+<footer class="section-footer" id="work-together">
   <div class="container">
-    <div class="footer-header">
-      <div class="header-content">
-        <img srcset="#" alt="me" class="header-img" />
-        <h2 class="header-title">
-          LET'S <span class="highlighted-text">WORK</span>
-        </h2>
+    <div class="footer-content-wrapper">
+      <h3 class="footer-title">
+        <picture>
+          <source
+            srcset="
+              /src/img/logo/footer-tablet-and-desktop-logo-1x.png,
+              /src/img/logo/footer-tablet-and-desktop-logo-2x.png
+            "
+          />
+          <source
+            srcset="
+              /src/img/logo/mobile-footer-logo-1x.png,
+              /src/img/logo/mobile-footer-logo-2x.png
+            "
+          />
+          <img
+            src="/src/img/logo/footer-tablet-and-desktop-logo-1x.png"
+            alt="me"
+            class="footer-img"
+          />
+        </picture>
+        LET'S <span class="highlighted-text">WORK</span>TOGETHER
+      </h3>
+      <form class="form-section">
+        <div class="input-fields">
+          <div>
+            <input
+              class="input-field"
+              type="email"
+              name="email"
+              placeholder="clients@gmail.com"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              title="Please enter a valid email address"
+              autocomplete="off"
+              required
+            />
+            <p class="success-text visually-hidden">Success</p>
+            <p class="error-text visually-hidden">Invalid email, try again</p>
+          </div>
+          <div>
+            <input
+              class="input-field"
+              name="comment"
+              placeholder="comments"
+              maxlength="50"
+              autocomplete="off"
+              required
+            />
+            <p class="success-text visually-hidden">Success</p>
+            <p class="error-text visually-hidden">Invalid email, try again</p>
+          </div>
+        </div>
+        <button type="submit" class="submit-button">Send</button>
+      </form>
+      <div class="contact-info">
+        <a class="email-info" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+        <a class="phone-info" href="tel:+380 11 1111 11 11"
+          >+380 11 1111 11 11</a
+        >
       </div>
-      <h3 class="header-title"><span class="sub-text">TOGETHER</span></h3>
     </div>
-    <form class="form-section">
-      <div class="input-fields">
-        <input
-          class="input-field"
-          type="email"
-          name="email"
-          placeholder="clients@gmail.com"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          title="Please enter a valid email address"
-          required
-        />
-        <input
-          class="input-field"
-          name="comment"
-          type="text"
-          placeholder="comments"
-          maxlength="50"
-          required
-        />
-      </div>
-      <button type="submit" class="submit-button">Send</button>
-   </form>
-    <div class="contact-info">
-      <a class="email-info" href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
-      <a class="phone-info" href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
-    </div>
-  </div>
   </div>
 </footer>
