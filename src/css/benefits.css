@@ -133,11 +133,31 @@ ul {
     .order-button {
         margin-top: 64px;
     }
+
+    .order-button {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: auto;
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .benefits-section {
         padding-top: 132px;
         padding-bottom: 132px;
+    }
+
+    .list-benefits {
+        display: flex;
+    }
+
+    .contain {
+        display: flex;
+    }
+
+
+
+    .titl {
+        margin-right: 400px;
     }
 }
