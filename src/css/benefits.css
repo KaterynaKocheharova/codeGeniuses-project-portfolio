@@ -29,13 +29,14 @@
 }
 
 .title-benefits {
-  margin-bottom: 8px;
-  text-align: left;
-  text-transform: uppercase;
+  color: rgb(250, 250, 250);
+  font-family: Inter Tight;
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #fafafa;
+  line-height: 30px;
+  letter-spacing: -2%;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .list-benefits {
@@ -52,10 +53,11 @@
 }
 
 .text-benefits {
-  font-size: 16px;
+  color: rgba(250, 250, 250, 0.6);
   font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
   text-align: left;
-  width: 284px;
 }
 
 .order-button {
