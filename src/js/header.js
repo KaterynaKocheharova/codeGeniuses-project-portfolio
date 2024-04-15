@@ -1,6 +1,6 @@
 const socialLink = document.querySelector('.social-link');
 const modalMenu = document.querySelector('.modal-menu');
-const closeBtn = document.querySelector('.close-btn');
+const closeBtn = document.querySelector('.close-btn-menu');
 const dropdownMenu = document.getElementById('menu');
 const mobMenuText = document.querySelectorAll('.mob-menu-text');
 const mobMenuBtn = document.querySelector('.mob-menu-button-order');
@@ -14,7 +14,8 @@ socialLink.addEventListener('click', e => {
   modalMenu.classList.add('is-open');
   body.classList.add('modal-is-open');
 });
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', e => {
+  e.preventDefault();
   modalMenu.classList.remove('is-open');
   body.classList.remove('modal-is-open');
 });
