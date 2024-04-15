@@ -40,6 +40,11 @@
   overflow-y: auto;
 }
 
+.reviews-item:nth-child(5) {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
 .reviews-image {
   border-radius: 10px;
   margin-bottom: 32px;
@@ -68,4 +73,8 @@
 .container .reviews-swiper-wrapper {
   height: 332px;
   margin-bottom: 32px;
+}
+
+.container .reviews-swiper-container {
+  overflow: hidden;
 }
