@@ -17,8 +17,7 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
 let parametrs = {
-  modules: [Navigation, Mousewheel, Keyboard],
-
+  modules: [Navigation, Keyboard],
   slidesPerView: 2,
   lazy: true,
   loop: true,
@@ -43,4 +42,4 @@ let parametrs = {
   },
 };
 
-const aboutMeSwiper = new SwiperAbout('.about-me-swiper-container', parametrs);
+new SwiperAbout('.about-me-swiper-container', parametrs);

@@ -51,57 +51,29 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
 }
 
 function initSwiper() {
-  const breakpoints = {
-    375: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1440: {
-      slidesPerView: 4,
-    },
-  };
-
   let params = {
-    modules: [Navigation, Mousewheel, Keyboard],
+    modules: [Navigation, Keyboard],
     spaceBetween: 16,
     loop: false,
     direction: 'horizontal',
     mousewheel: true,
     keyboard: true,
-    breakpoints,
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 4,
+      },
+    },
 
     navigation: {
       nextEl: '.custom-swiper-btn-next',
       prevEl: '.custom-swiper-btn-prev',
     },
-    on: {
-      init: function () {
-        this.navigation.prevEl.setAttribute(
-          'data-swiper-button-disabled',
-          'true'
-        );
-      },
-      slideChange: function () {
-        if (this.activeIndex === 0) {
-          this.navigation.prevEl.setAttribute(
-            'data-swiper-button-disabled',
-            'true'
-          );
-        } else {
-          this.navigation.prevEl.removeAttribute('data-swiper-button-disabled');
-        }
-        if (this.activeIndex === this.slides.length - 1) {
-          this.navigation.nextEl.setAttribute(
-            'data-swiper-button-disabled',
-            'true'
-          );
-        } else {
-          this.navigation.nextEl.removeAttribute('data-swiper-button-disabled');
-        }
-      },
-    },
   };
-  const reviewsSwiper = new Swiper('.reviews-swiper-container', params);
+  new Swiper('.reviews-swiper-container', params);
 }
