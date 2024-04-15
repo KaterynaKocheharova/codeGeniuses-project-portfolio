@@ -2,17 +2,20 @@
   margin-bottom: 64px;
   user-select: none;
   overflow: hidden;
+  padding-top: 64px;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-section {
     margin-bottom: 96px;
+    padding-top: 96px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .reviews-section {
     margin-bottom: 164px;
+    padding-top: 164px;
   }
 }
 
