@@ -56,17 +56,21 @@
   min-height: 504px;
   background-color: #444444;
   background-image: url('../img/covers/backgrounds/covers-background-mobile-1x-min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   }
   
   @media (min-resolution: 192dpi) {
   .section-covers {
   background-image: url('../img/covers/backgrounds/covers-background-mobile-2x-min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   }
   }
   
   /* =================== TABLET =============================*/
   
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
   .content {
   min-width: 768px;
   }
@@ -107,13 +111,19 @@
   }
   
   .film {
-  right: -1150px;
-  top: -380px;
+    right: -1130px;
+    top: -405px;
   }
-  
+
+  .film-line {
+    height: 314px;
+    margin-bottom: 100px;
+  } 
+
   .film-element {
-  margin-bottom: 300px;
-  }
+    width: 544px;
+    margin-right: 60px;
+  } 
   
   .section-covers {
   min-height: 960px;
