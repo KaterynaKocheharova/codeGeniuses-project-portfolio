@@ -1,4 +1,6 @@
 import { sendInfo } from './API';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form-section');
 const modal = document.querySelector('.backdrop');
@@ -19,11 +21,10 @@ async function handleFormSubmit(event) {
     form.reset();
   } catch (error) {
     iziToast.show({
-      title: `@{error}`,
       titleColor: 'rgba(250, 250, 250, 0.6)',
       titleLineHeight: '1.2',
       message:
-        'Sorry. There is a problem with your request. Edit your message please',
+        'Sorry. There is a problem with your request or server. Try editing your message',
       messageColor: 'rgba(250, 250, 250, 0.6)',
       backgroundColor: 'rgb(237, 59, 68)',
     });
@@ -32,27 +33,74 @@ async function handleFormSubmit(event) {
 
 function openModal() {
   modal.classList.remove('hidden');
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', closeModalOnBackdrop);
+  window.addEventListener('keydown', closeModalOnEscape);
 }
-
-closeBtn.addEventListener('click', closeModal);
 
 function closeModal() {
   modal.classList.add('hidden');
+  closeBtn.removeEventListener('click', closeModal);
+  modal.removeEventListener('click', closeModalOnBackdrop);
+  document.removeEventListener('keydown', closeModalOnEscape);
 }
 
-// const inputFields = document.querySelector('.input-fields');
+function closeModalOnBackdrop(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+}
 
-// inputFields.forEach(inputField => {
-//   inputField.addEventListener('input', limitInput);
-// });
+function closeModalOnEscape(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
 
-// function limitInput(event) {
-//   const maxLength = 20; // Set your desired maximum length
-//   const input = event.target;
+const emailInput = document.querySelector('input[name="email"]');
+const commentInput = document.querySelector('input[name="comment"]');
+const success = document.querySelector('.success-text');
+const error = document.querySelector('.error-text');
 
-//   if (input.value.length > maxLength) {
-//     input.value = input.value.substring(0, maxLength) + '...';
-//   }
-// }
+function showSuccess() {
+  success.classList.remove('visually-hidden');
+  error.classList.add('visually-hidden');
+}
 
-// opening and closing modal
+function showError() {
+  success.classList.add('visually-hidden');
+  error.classList.remove('visually-hidden');
+}
+
+function hideMessages() {
+  success.classList.add('visually-hidden');
+  error.classList.add('visually-hidden');
+}
+
+commentInput.addEventListener('click', () => {
+  if (emailInput.validity.valid) {
+    showSuccess();
+  } else {
+    showError();
+  }
+});
+
+function clearInputClassesAndText() {
+  emailInput.classList.remove('success');
+  emailInput.classList.remove('error');
+  hideMessages();
+}
+
+emailInput.addEventListener('click', () => {
+  hideMessages();
+});
+
+emailInput.addEventListener('input', function () {
+  if (this.validity.valid) {
+    this.classList.remove('error');
+    this.classList.add('success');
+  } else {
+    this.classList.remove('success');
+    this.classList.add('error');
+  }
+});
