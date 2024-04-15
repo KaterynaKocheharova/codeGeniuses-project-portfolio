@@ -1,6 +1,7 @@
 .footer-content-wrapper {
   max-width: 343px;
 }
+
 .footer-content {
   display: flex;
   gap: 8px;
