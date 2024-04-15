@@ -48,6 +48,13 @@
   height: 22px;
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal-title {
   width: 279px;
   font-size: 20px;
@@ -55,6 +62,7 @@
   letter-spacing: -0.02em;
   color: rgb(250, 250, 250);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .modal-paragraf {
@@ -63,10 +71,12 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   margin: 0;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .modal-window {
+    max-width: 492px;
     padding: 64px;
   }
 }
