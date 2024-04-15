@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 body {
@@ -7,6 +8,19 @@ body {
   font-weight: 400;
   background-color: #1c1d20;
   color: rgb(250, 250, 250);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Додатковий клас боді із опен - це для тих хто буде працювати над модальним меню для мобілки - там треба буде за допомогою джі-ес прибрати скрол для баді */
