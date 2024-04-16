@@ -51,25 +51,18 @@
   color: #fafafa;
   border: none;
   display: none;
+  transition: background-color 250ms linear;
 }
 
-.mob-menu-button-order {
-  background-color: #ed3b44;
-  cursor: pointer;
-  border-radius: 60px;
-  padding: 14px 31px;
-  width: 164px;
-  height: 45px;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
-  border: none;
+@media screen and (min-width: 768px) {
+
+  .button-order {
+      display: block;
+    }
+
 }
 
-.mob-menu-button-order:hover{
-  background-color: #e0373f;
-}
+
 
 .box-mob-button {
   align-self: center;
@@ -80,7 +73,7 @@
   background-color: #e0373f;
 }
 
-/*/////////////////////////  MODAL  ///////////////////////////////*/
+/* MODAL*/
 
 .modal-menu {
   position: fixed;
@@ -99,6 +92,8 @@
     visibility 900ms cubic-bezier(0.1, 0, 0.2, 1),
     transform 900ms cubic-bezier(0.1, 0, 0.2, 1);
 }
+
+
 
 .box-menu {
   display: flex;
@@ -125,11 +120,39 @@
   text-underline-offset: 0.3em;
   color: #fafafa;
   text-underline-offset: 0.3em;
+  transition: color 250ms linear;
 }
 
 .mob-menu-text:hover{
   color: #ED3B44;
 }
+
+.mob-menu-button-order {
+  background-color: #ed3b44;
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  border: none;
+  transition: background-color 250ms linear;
+}
+
+.mob-menu-button-order:hover {
+  background-color: #e0373f;
+}
+
+
+@media screen and (min-width: 768px) {
+  .social-link {
+      display: none;
+    }
+}
+
 
 .is-open {
   opacity: 1;
@@ -149,6 +172,15 @@
   display: none;
   padding-top: 10px;
 }
+
+@media screen and (min-width: 768px) {
+  .dropdown {
+      display: inline-block;
+    }
+
+}
+
+
 .dropdown-btn-menu {
   font-weight: 500;
   font-size: 16px;
@@ -190,36 +222,4 @@
 
 .dropdown-box.show {
   opacity: 1;
-}
-
-/* ///////////////////////////////////////////////////////////////////////// */
-
-@media screen and (min-width: 768px) {
-  .menu {
-    display: block;
-  }
-
-  .button-order {
-    display: block;
-  }
-
-  .social-link {
-    display: none;
-  }
-
-  .dropdown {
-    display: inline-block;
-  }
-  .modal-menu {
-    opacity: 0;
-    visibility: hidden;
-
-    transform: translateX(100%);
-    transition: opacity 500ms cubic-bezier(0.1, 0, 0.1, 1),
-      visibility 500ms cubic-bezier(0.1, 0, 0.2, 1),
-      transform 800ms cubic-bezier(0.1, 0, 0.2, 1);
-  }
-  .mob-menu {
-    display: none;
-  }
 }
