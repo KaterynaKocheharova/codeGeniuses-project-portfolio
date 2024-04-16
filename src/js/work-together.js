@@ -21,12 +21,14 @@ async function handleFormSubmit(event) {
     form.reset();
   } catch (error) {
     iziToast.show({
-      titleColor: 'rgba(250, 250, 250, 0.6)',
       titleLineHeight: '1.2',
+      maxWidth: 500,
       message:
-        'Sorry. There is a problem with your request or server. Try editing your message',
-      messageColor: 'rgba(250, 250, 250, 0.6)',
-      backgroundColor: 'rgb(237, 59, 68)',
+        'Sorry. You made an error in the input fields or there is an error on the server side',
+      messageSize: '50px',
+      messageColor: '#ed3b44',
+      backgroundColor: 'black',
+      position: 'topRight',
     });
   }
 }
