@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { getReviews } from './API';
 
 import Swiper from 'swiper';
@@ -7,6 +10,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
+const reviewsSwiperContainer = document.querySelector(
+  '.reviews-swiper-container'
+);
+const swiperBtns = `<div class="btns-wrapper">
+          <div class="custom-swiper-btn-prev">
+            <svg class="swiper-btn-prev-icon" width="32" height="32">
+              <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
+            </svg>
+          </div>
+          <div class="custom-swiper-btn-next">
+            <svg class="swiper-btn-next-icon" width="32" height="32">
+              <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
+            </svg>
+          </div>
+        </div>
+    </div >`;
 
 onCreateReview();
 async function onCreateReview() {
@@ -14,15 +33,16 @@ async function onCreateReview() {
     const reviews = await getReviews();
     const reviewsMarkup = reviewsTemplate(reviews);
     reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
+    reviewsSwiperContainer.insertAdjacentHTML('beforeend', swiperBtns);
     initSwiper();
   } catch (error) {
     iziToast.show({
-      title: `@{error}`,
-      titleColor: 'rgba(250, 250, 250, 0.6)',
       titleLineHeight: '1.2',
-      message: 'Sorry. There is an error with the request',
-      messageColor: 'rgba(250, 250, 250, 0.6)',
-      backgroundColor: 'rgb(237, 59, 68)',
+      message: 'Sorry. You cannot see reviews right now',
+      messageSize: '50px',
+      messageColor: '#ed3b44',
+      backgroundColor: 'black',
+      position: 'topRight',
     });
     reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
   }
