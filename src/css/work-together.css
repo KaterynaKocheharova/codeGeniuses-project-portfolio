@@ -3,8 +3,8 @@
   padding-bottom: 32px;
   background-image: url(../img/work-together/mobile/work-together-background-mobile-1x.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: right;
 }
 
 @media screen and (min-resolution: 192dpi),
@@ -14,9 +14,6 @@
     padding-top: 48px;
     padding-bottom: 32px;
     background-image: url(../img/work-together/mobile/work-together-background-mobile-2x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 }
 
