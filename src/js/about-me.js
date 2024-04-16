@@ -17,7 +17,7 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
 let parametrs = {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Mousewheel, Keyboard],
   slidesPerView: 2,
   lazy: true,
   loop: true,
