@@ -14,28 +14,12 @@ const reviewsSwiperContainer = document.querySelector(
   '.reviews-swiper-container'
 );
 
-const swiperBtns = `
-    <div class="btns-wrapper">
-        <div class="custom-swiper-btn-prev">
-            <svg class="swiper-btn-prev-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
-            </svg>
-        </div>
-        <div class="custom-swiper-btn-next">
-            <svg class="swiper-btn-next-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
-            </svg>
-        </div>
-    </div>
-</div>`;
-
 onCreateReview();
 async function onCreateReview() {
   try {
     const reviews = await getReviews();
     const reviewsMarkup = reviewsTemplate(reviews);
     reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
-    reviewsSwiperContainer.insertAdjacentHTML('beforeend', swiperBtns);
     initSwiper();
   } catch (error) {
     iziToast.show({
