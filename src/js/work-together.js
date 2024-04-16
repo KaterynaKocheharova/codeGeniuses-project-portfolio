@@ -35,6 +35,7 @@ async function handleFormSubmit(event) {
 
 function openModal() {
   modal.classList.remove('hidden');
+  document.body.classList.add('modal-is-open');
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', closeModalOnBackdrop);
   window.addEventListener('keydown', closeModalOnEscape);
@@ -42,6 +43,7 @@ function openModal() {
 
 function closeModal() {
   modal.classList.add('hidden');
+  document.body.classList.remove('modal-is-open');
   closeBtn.removeEventListener('click', closeModal);
   modal.removeEventListener('click', closeModalOnBackdrop);
   document.removeEventListener('keydown', closeModalOnEscape);
