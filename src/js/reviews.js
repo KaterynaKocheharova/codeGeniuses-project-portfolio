@@ -13,19 +13,21 @@ const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 const reviewsSwiperContainer = document.querySelector(
   '.reviews-swiper-container'
 );
-const swiperBtns = `<div class="btns-wrapper">
-          <div class="custom-swiper-btn-prev">
+
+const swiperBtns = `
+    <div class="btns-wrapper">
+        <div class="custom-swiper-btn-prev">
             <svg class="swiper-btn-prev-icon" width="32" height="32">
-              <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
+                <use href="./img/sprite.svg#icon-slider-arrow-left"></use>
             </svg>
-          </div>
-          <div class="custom-swiper-btn-next">
-            <svg class="swiper-btn-next-icon" width="32" height="32">
-              <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
-            </svg>
-          </div>
         </div>
-    </div >`;
+        <div class="custom-swiper-btn-next">
+            <svg class="swiper-btn-next-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-slider-arrow-right"></use>
+            </svg>
+        </div>
+    </div>
+</div>`;
 
 onCreateReview();
 async function onCreateReview() {

@@ -79,3 +79,7 @@
 .container .reviews-swiper-container {
   overflow: hidden;
 }
+
+.container .swiper-slide {
+  margin-bottom: unset;
+}

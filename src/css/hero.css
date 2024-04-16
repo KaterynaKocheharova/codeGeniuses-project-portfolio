@@ -44,6 +44,13 @@
   gap: 4px;
 }
 
+@media screen and (max-width: 375px) {
+  .hero-social-list {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+}
+
 .hero-list-item {
   box-sizing: border-box;
   border: 1px solid rgba(250, 250, 250, 0.2);
