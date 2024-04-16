@@ -18,13 +18,6 @@
 
 .footer-content-wrapper {
   max-width: 343px;
-  padding-bottom: 33px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-content-wrapper {
-    padding-bottom: 170px;
-  }
 }
 
 .footer-content {

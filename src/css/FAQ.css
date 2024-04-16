@@ -3,8 +3,18 @@
   padding-bottom: 64px;
 }
 
-.faq-container {
-  margin-bottom: 64px;
+@media screen and (min-width: 768px) {
+  .faq-questions-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .faq-questions-section {
+    padding-top: 82px;
+    padding-bottom: 164px;
+  }
 }
 
 .faq-title {
@@ -77,15 +87,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .faq-questions-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .faq-container {
-    margin-bottom: 96px;
-  }
-
   .ac.faq-list-item {
     padding: 32px 0 24px;
   }
@@ -105,15 +106,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .faq-questions-section {
-    padding-top: 82px;
-    padding-bottom: 82px;
-  }
-
-  .faq-container {
-    margin-bottom: 164px;
-  }
-
   .faq-list {
     display: flex;
     flex-wrap: wrap;
