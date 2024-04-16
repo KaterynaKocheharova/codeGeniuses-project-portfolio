@@ -202,6 +202,11 @@
   line-height: 1.18;
   background: rgb(237, 59, 68);
   color: #ffffff;
+  transition: background-color 250ms linear;
+}
+
+.project-wrapper-link:hover {
+  background-color: rgb(224, 55, 63);
 }
 
 @media screen and (min-width: 768px) {
