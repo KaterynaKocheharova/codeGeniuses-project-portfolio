@@ -1,24 +1,30 @@
 .section-covers {
   overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .section-covers {
+    max-width: 320px;
   }
-  
-  .content {
+}
+
+.content {
   position: relative;
-  }
-  
-  .film {
+}
+
+.film {
   position: absolute;
-  }
-  
-  .film-line {
+}
+
+.film-line {
   list-style: none;
   height: 163px;
   display: flex;
   margin-bottom: 20px;
   transform: rotate(16deg);
-  }
-  
-  .film-element {
+}
+
+.film-element {
   flex-shrink: 0;
   margin-right: 10px;
   display: flex;
@@ -26,90 +32,89 @@
   justify-content: center;
   width: 282px;
   white-space: nowrap;
-  animation-name: filmLine; 
+  animation-name: filmLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  }
-  
-  @keyframes filmLine {
+}
+
+@keyframes filmLine {
   from {
-  transform: translateX(-20%);
+    transform: translateX(-20%);
   }
-  
+
   to {
-  transform: translateX(-180%);
+    transform: translateX(-180%);
   }
-  }
-  
-  /* ==================== MOBILE ============================ */
-  
-  .content {
+}
+
+/* ==================== MOBILE ============================ */
+
+.content {
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
-  }
-  
-  .section-covers {
+}
+
+.section-covers {
   margin: auto;
-  min-width: 375px;
   min-height: 504px;
   background-color: #444444;
   background-image: url('../img/covers/backgrounds/covers-background-mobile-1x-min.png');
   background-repeat: no-repeat;
   background-size: cover;
-  }
-  
-  @media (min-resolution: 192dpi) {
+}
+
+@media (min-resolution: 192dpi) {
   .section-covers {
-  background-image: url('../img/covers/backgrounds/covers-background-mobile-2x-min.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url('../img/covers/backgrounds/covers-background-mobile-2x-min.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  }
-  
-  /* =================== TABLET =============================*/
-  
-  @media screen and (min-width: 768px) and (max-width: 1439px) {
+}
+
+/* =================== TABLET =============================*/
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .content {
-  min-width: 768px;
+    min-width: 768px;
   }
-  
+
   .film {
-  right: -1500px;
-  top: -380px;
+    right: -1500px;
+    top: -380px;
   }
-  
+
   .film-line {
-  height: 314px;
-  margin-bottom: 100px;
+    height: 314px;
+    margin-bottom: 100px;
   }
-  
+
   .film-element {
-  width: 544px;
-  margin-right: 60px;
+    width: 544px;
+    margin-right: 60px;
   }
-  
+
   .section-covers {
-  min-width: 768px;
-  min-height: 960px;
-  background-image: url('../img/covers/backgrounds/covers-background-tablet-1x-min.png');
+    min-width: 768px;
+    min-height: 960px;
+    background-image: url('../img/covers/backgrounds/covers-background-tablet-1x-min.png');
   }
-  
+
   @media (min-resolution: 192dpi) {
-  .section-covers {
-  background-image: url('../img/covers/backgrounds/covers-background-tablet-2x-min.png');
+    .section-covers {
+      background-image: url('../img/covers/backgrounds/covers-background-tablet-2x-min.png');
+    }
   }
-  }
-  }
-  
-  /* ================== DESKTOP ============================*/
-  
-  @media screen and (min-width: 1440px) {
+}
+
+/* ================== DESKTOP ============================*/
+
+@media screen and (min-width: 1440px) {
   .content {
-  min-width: 1440px;
+    min-width: 1440px;
   }
-  
+
   .film {
     right: -1130px;
     top: -405px;
@@ -118,22 +123,22 @@
   .film-line {
     height: 314px;
     margin-bottom: 100px;
-  } 
+  }
 
   .film-element {
     width: 544px;
     margin-right: 60px;
-  } 
-  
-  .section-covers {
-  min-height: 960px;
-  min-width: 1440px;
-  background-image: url('../img/covers/backgrounds/covers-background-desktop-1x-min.png');
   }
-  
+
+  .section-covers {
+    min-height: 960px;
+    min-width: 1440px;
+    background-image: url('../img/covers/backgrounds/covers-background-desktop-1x-min.png');
+  }
+
   @media (min-resolution: 192dpi) {
-  .section-covers {
-  background-image: url('../img/covers/backgrounds/covers-background-desktop-2x-min.png');
+    .section-covers {
+      background-image: url('../img/covers/backgrounds/covers-background-desktop-2x-min.png');
+    }
   }
-  }
-  }
+}
