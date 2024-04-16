@@ -53,8 +53,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 8px;
+  padding: 10px 8px;
   transition: border 250ms linear, color 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-list-item {
+    padding: 18px 16px;
+  }
 }
 
 .hero-list-item:hover,
@@ -115,7 +121,7 @@
   }
 
   .email {
-    width: 223px;
+    max-width: 223px;
   }
 
   .email-item {
