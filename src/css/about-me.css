@@ -13,7 +13,7 @@
 
 .about-me-section {
   padding-top: 64px;
-  margin-bottom: 70px;
+  padding-bottom: 32px;
 }
 
 .about-me-description-text {
@@ -228,8 +228,9 @@
 @media screen and (min-width: 768px) {
   .about-me-section {
     padding-top: 64px;
-    margin-bottom: 102px;
+    padding-bottom: 48px;
   }
+
   .about-me-description-text {
     font-size: 38px;
     line-height: 40px;
@@ -238,6 +239,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
+
   .about-me-description-box {
     height: 700px;
     width: 704px;
@@ -287,7 +289,7 @@
 @media screen and (min-width: 1440px) {
   .about-me-section {
     padding-top: 96px;
-    margin-bottom: 170px;
+    padding-bottom: 82px;
   }
   .about-me-description-text {
     padding-left: 66px;

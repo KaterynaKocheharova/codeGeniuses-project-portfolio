@@ -1,5 +1,6 @@
 .benefits-section {
-  margin-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .icon-benefits {
@@ -74,7 +75,8 @@
 
 @media screen and (min-width: 768px) {
   .benefits-section {
-    margin-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .list-benefits {
@@ -102,7 +104,8 @@
 
 @media screen and (min-width: 1440px) {
   .benefits-section {
-    margin-bottom: 164px;
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 
   .list-benefits {
