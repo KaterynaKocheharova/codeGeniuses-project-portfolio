@@ -16,6 +16,40 @@
     }
 }
 
+
+@media screen and (min-width: 768px) {
+    .hero-section {
+        background-image: url(../img/hero/tablet/tablet-hero-background-1x.png);
+        height: 1024px;
+        padding-top: 300px;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+       screen and (min-resolution: 2dppx) and (min-width: 768px),
+       screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero-section {
+        background-image: url(../img/hero/tablet/tablet-hero-background-2x.png);
+    }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    .hero-section {
+        background-image: url(../img/hero/desktop/hero-desktop-red-background-1x.png);
+        height: 900px;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+       screen and (min-resolution: 2dppx) and (min-width: 1440px),
+       screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    .hero-section {
+        background-image: url(../img/hero/desktop/hero-desktop-red-background-2x.png);
+    }
+}
+
 .hero-title {
     color: rgb(250, 250, 250);
     width: 343px;
@@ -35,6 +69,27 @@
     transition: opacity 1s, transform 1s;
 }
 
+@media screen and (min-width: 768px) {
+  
+    .hero-title {
+        color: rgb(250, 250, 250);
+        width: 632px;
+        font-size: 90px;
+        line-height: 1em;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 187px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .hero-title {
+        width: 1084px;
+        margin-bottom: 243px;
+    }
+}
+
 .hero-title.show {
     opacity: 1;
     transform: translateY(0);
@@ -43,6 +98,14 @@
 .hero-social-list {
     display: flex;
     gap: 4px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero-social-list {
+        justify-content: end;
+        gap: 8px;
+    }
 }
 
 .hero-list-item {
@@ -58,6 +121,20 @@
     transition: border 250ms linear, color 250ms linear;
 }
 
+@media screen and (min-width: 768px) {
+    .hero-list-item {
+        width: 55px;
+        height: 55px;
+        padding: 18px 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    .hero-list-item {
+        padding: 18px 20px;
+    }
+}
+
 .hero-list-item:hover,
 .hero-list-item:focus {
     border: 1px solid rgb(250, 250, 250);
@@ -70,9 +147,22 @@
     letter-spacing: -0.03em;
 }
 
+@media screen and (min-width: 768px) {
+  
+    .hero-list-link {
+        font-size: 16px;
+    }
+}
+
 .email {
     width: 178px;
     padding: 15px 17px;
+}
+@media screen and (min-width: 768px) {
+
+    .email {
+        width: 223px;
+    }
 }
 
 .email-item {
@@ -80,84 +170,9 @@
     letter-spacing: -0.02em;
     text-align: left;
 }
-/* ======================= /mobile styles ============================ */
 
-/* ======================= tablet styles ============================ */
 @media screen and (min-width: 768px) {
-    .hero-section {
-        background-image: url(../img/hero/tablet/tablet-hero-background-1x.png);
-        height: 1024px;
-        padding-top: 300px;
-    }
-
-    .hero-title {
-        color: rgb(250, 250, 250);
-        width: 632px;
-        font-size: 90px;
-        line-height: 1em;
-        text-align: left;
-        text-transform: uppercase;
-        margin-bottom: 187px;
-    }
-
-    .hero-social-list {
-        justify-content: end;
-        gap: 8px;
-    }
-
-    .hero-list-item {
-        width: 55px;
-        height: 55px;
-        padding: 18px 16px;
-    }
-
-    .hero-list-link {
-        font-size: 16px;
-    }
-
-    .email {
-        width: 223px;
-    }
-
     .email-item {
         font-size: 16px;
     }
 }
-
-@media screen and (min-resolution: 192dpi) and (min-width: 768px),
-       screen and (min-resolution: 2dppx) and (min-width: 768px),
-       screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-    .hero-section {
-        background-image: url(../img/hero/tablet/tablet-hero-background-2x.png);
-    }
-}
-
-/* ======================= /tablet styles ============================ */
-
-/* ======================= desktop styles ============================ */
-
-@media screen and (min-width: 1440px) {
-    .hero-section {
-        background-image: url(../img/hero/desktop/hero-desktop-red-background-1x.png);
-        height: 900px;
-    }
-
-    .hero-title {
-        width: 1084px;
-        margin-bottom: 243px;
-    }
-
-    .hero-list-item {
-        padding: 18px 20px;
-    }
-}
-
-@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
-       screen and (min-resolution: 2dppx) and (min-width: 1440px),
-       screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
-    .hero-section {
-        background-image: url(../img/hero/desktop/hero-desktop-red-background-2x.png);
-    }
-}
-
-/* ======================= /desktop styles ============================ */
