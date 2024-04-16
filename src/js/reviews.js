@@ -45,6 +45,7 @@ async function onCreateReview() {
       messageColor: '#ed3b44',
       backgroundColor: 'black',
       position: 'topRight',
+      closeOnClick: true,
     });
     reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
   }
