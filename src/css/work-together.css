@@ -1,3 +1,21 @@
+.work-together-section {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .work-together-section {
+    padding-top: 91px;
+    padding-bottom: 169px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .work-together-section {
+    padding-top: 125px;
+  }
+}
+
 .footer-content-wrapper {
   max-width: 343px;
   padding-bottom: 33px;
