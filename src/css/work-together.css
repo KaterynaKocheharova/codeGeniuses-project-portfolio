@@ -201,6 +201,11 @@
   letter-spacing: -0.02em;
 }
 
+.email-info,
+.phone-info {
+  transition: border 250ms linear;
+}
+
 .footer-content-wrapper {
   margin: 0 auto;
 }

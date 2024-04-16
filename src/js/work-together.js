@@ -23,12 +23,12 @@ async function handleFormSubmit(event) {
     iziToast.show({
       titleLineHeight: '1.2',
       maxWidth: 500,
-      message:
-        'Sorry. You made an error in the input fields or there is an error on the server side',
+      message: `Sorry. ${error}. You filled in the inputs incorrectly or there's a server mistake`,
       messageSize: '50px',
       messageColor: '#ed3b44',
       backgroundColor: 'black',
       position: 'topRight',
+      closeOnClick: true,
     });
   }
 }
