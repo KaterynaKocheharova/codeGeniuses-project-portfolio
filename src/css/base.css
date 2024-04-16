@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
   user-select: none;
-  overflow-x: hidden;
 }
 
 body {
@@ -27,7 +26,7 @@ body {
 /* Додатковий клас боді із опен - це для тих хто буде працювати над модальним меню для мобілки - там треба буде за допомогою джі-ес прибрати скрол для баді */
 
 body.modal-is-open {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .container {
