@@ -11,6 +11,8 @@ import 'swiper/css/navigation';
 
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 
+// ===================== GETTING REVIEWS FROM BACKEND
+
 onCreateReview();
 async function onCreateReview() {
   try {
@@ -31,6 +33,8 @@ async function onCreateReview() {
     reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
   }
 }
+
+// ==================== RENDERING REVIEWS
 
 function reviewsTemplate(arr) {
   return arr.map(reviewTemplate).join('');
@@ -54,6 +58,8 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
       </li>
   `;
 }
+
+// ========================== SWIPER
 
 function initSwiper() {
   let params = {

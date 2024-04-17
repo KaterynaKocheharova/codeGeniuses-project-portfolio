@@ -1,5 +1,7 @@
 const heroTitle = document.querySelector('.hero-title');
 
+// ========================= SMOOTH APPEARING ON SCROLL
+
 document.addEventListener('DOMContentLoaded', animateOnScroll, {
   passive: true,
 });
