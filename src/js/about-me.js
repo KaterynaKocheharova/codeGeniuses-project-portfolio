@@ -5,11 +5,15 @@ import SwiperAbout from 'swiper';
 import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
+// =============== ACCORDION
+
 new Accordion('.accordion-container', {
   duration: 600,
   showMultiple: false,
   openOnInit: [0],
 });
+
+// ============== SWIPER
 
 let parametrs = {
   modules: [Navigation, Mousewheel, Keyboard],
