@@ -1,9 +1,8 @@
 .reviews-section {
   padding-top: 64px;
-  padding-bottom: 48px;
+  padding-bottom: 32px;
   user-select: none;
   overflow: hidden;
-  padding-top: 63px;
 }
 
 @media screen and (min-width: 768px) {
