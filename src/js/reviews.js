@@ -45,6 +45,7 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
           alt="reviewer's avatar"
           width="48"
           height="48"
+          loading="lazy"
         />
         <h3 class="section-subtitle reviews-subtitle">${author}</h3>
         <p class="section-text reviews-text">
