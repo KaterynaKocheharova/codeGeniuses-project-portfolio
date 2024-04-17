@@ -49,22 +49,22 @@
   }
 }
 
-.work-together-content-wrapper {
+.footer-content-wrapper {
   max-width: 343px;
 }
 
-.work-together-content {
+.footer-content {
   display: flex;
   gap: 8px;
 }
 
-.work-together-img {
+.footer-img {
   width: 44px;
   height: 44px;
   border-radius: 12px;
 }
 
-.work-together-title {
+.footer-title {
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
@@ -80,8 +80,6 @@
 .highlighted-text {
   color: #ed3b44;
 }
-
-/* ================ INPUT */
 
 .input-fields {
   display: flex;
@@ -121,31 +119,31 @@
 .input-field.success {
   border-bottom: 1px solid rgb(60, 188, 129);
 }
-
 .input-field.error {
   border-bottom: 1px solid rgb(231, 74, 59);
 }
-
-.success-text,
-.error-text {
+.success-text {
+  color: rgb(60, 188, 129);
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   letter-spacing: -0.03em;
   text-align: left;
 }
-
-.success-text {
-  color: rgb(60, 188, 129);
-}
-
 .error-text {
   color: rgb(231, 74, 59);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  text-align: left;
 }
-
-.error-text.hidden,
-.success-text.hidden {
+.error-text.hidden {
   display: none;
+  opacity: 0;
+}
+.success-text.hidden {
+  display: flex;
   opacity: 0;
 }
 
@@ -173,7 +171,19 @@
   flex-wrap: wrap;
 }
 
-.email-info,
+.email-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  background-color: transparent;
+  color: rgb(250, 250, 250);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
 .phone-info {
   display: flex;
   justify-content: center;
@@ -186,7 +196,15 @@
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.02em;
+}
+
+.email-info,
+.phone-info {
   transition: border 250ms linear;
+}
+
+.footer-content-wrapper {
+  margin: 0 auto;
 }
 
 .email-info:hover,
@@ -194,8 +212,9 @@
   border: 1px solid #fafafa;
 }
 
-.work-together-content-wrapper {
-  margin: 0 auto;
+.phone-info:hover,
+.phone-info:focus {
+  border: 1px solid #fafafa;
 }
 
 @media screen and (min-width: 768px) {
@@ -206,21 +225,21 @@
     align-items: center;
   }
 
-  .work-together-content-wrapper {
+  .footer-content-wrapper {
     max-width: 704px;
   }
 
-  .work-together-header {
+  .footer-header {
     max-width: 542px;
   }
 
-  .work-together-img {
+  .footer-img {
     width: 70px;
     height: 70px;
     border-radius: 24px;
   }
 
-  .work-together-title {
+  .footer-title {
     font-size: 64px;
     max-width: 420px;
   }
@@ -243,7 +262,6 @@
   .contact-info {
     gap: 8px;
   }
-
   .email-info {
     padding: 18px 32px;
   }
@@ -258,7 +276,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .work-together-content-wrapper {
+  .footer-content-wrapper {
     max-width: 1048px;
   }
 

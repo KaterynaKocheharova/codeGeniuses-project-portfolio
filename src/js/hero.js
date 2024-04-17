@@ -1,5 +1,3 @@
-//============================ HERO TITLE SMOOTH APPEARING
-
 const heroTitle = document.querySelector('.hero-title');
 
 document.addEventListener('DOMContentLoaded', animateOnScroll);

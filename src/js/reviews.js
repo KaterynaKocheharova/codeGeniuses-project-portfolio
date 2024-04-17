@@ -9,8 +9,6 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// ====================== GETTING REVIEWS
-
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 const reviewsSwiperContainer = document.querySelector(
   '.reviews-swiper-container'
@@ -37,8 +35,6 @@ async function onCreateReview() {
   }
 }
 
-// ===================== RENDERING
-
 function reviewsTemplate(arr) {
   return arr.map(reviewTemplate).join('');
 }
@@ -60,8 +56,6 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
       </li>
   `;
 }
-
-// ========================== SWIPER
 
 function initSwiper() {
   let params = {

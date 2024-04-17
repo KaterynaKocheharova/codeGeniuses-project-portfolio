@@ -4,8 +4,6 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// ==================== SWIPER
-
 let params = {
   modules: [Navigation, Keyboard],
 

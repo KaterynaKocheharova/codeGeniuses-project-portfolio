@@ -9,8 +9,6 @@ const dropdownItem = document.querySelectorAll('.dropdown-item');
 const dropdownBtn = document.querySelector('.dropdown-btn-menu');
 const body = document.querySelector('body');
 
-// =============== OPENING AND CLOSING MODAL
-
 headerBurger.addEventListener('click', e => {
   e.preventDefault();
   modalMenu.classList.add('is-open');
