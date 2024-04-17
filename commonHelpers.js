@@ -6,6 +6,7 @@ import{A as L,S as d,N as u,M as B,K as m,a as g,i as b}from"./assets/vendor-1c9
           alt="reviewer's avatar"
           width="48"
           height="48"
+          loading="lazy"
         />
         <h3 class="section-subtitle reviews-subtitle">${s}</h3>
         <p class="section-text reviews-text">
