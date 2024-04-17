@@ -221,6 +221,7 @@
     flex-direction: row;
     gap: 32px;
     align-items: center;
+    margin-bottom: 18px;
   }
 
   .footer-content-wrapper {
