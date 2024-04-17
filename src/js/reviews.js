@@ -10,9 +10,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
-const reviewsSwiperContainer = document.querySelector(
-  '.reviews-swiper-container'
-);
 
 onCreateReview();
 async function onCreateReview() {

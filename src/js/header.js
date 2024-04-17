@@ -9,33 +9,42 @@ const dropdownItem = document.querySelectorAll('.dropdown-item');
 const dropdownBtn = document.querySelector('.dropdown-btn-menu');
 const body = document.querySelector('body');
 
-headerBurger.addEventListener('click', e => {
+// ======================= OPEN MODAL
+
+headerBurger.addEventListener('click', openModal);
+
+function openModal(e) {
   e.preventDefault();
   modalMenu.classList.add('is-open');
   body.classList.add('modal-is-open');
+}
+
+// ======================= CLOSE MODAL
+
+closeBtn.addEventListener('click', closeModal);
+
+mobMenuLink.forEach(elem => {
+  elem.addEventListener('click', linksCloseModal);
 });
 
-closeBtn.addEventListener('click', e => {
+mobMenuBtn.addEventListener('click', linksCloseModal);
+
+function closeModal(e) {
   e.preventDefault();
   modalMenu.classList.remove('is-open');
   body.classList.remove('modal-is-open');
-});
+}
+
+function linksCloseModal(e) {
+  modalMenu.classList.remove('is-open');
+  body.classList.remove('modal-is-open');
+}
+
+// ====================== DROPDOWN
 
 dropdownBtn.addEventListener('click', e => {
   e.preventDefault();
   dropdownMenu.classList.toggle('show');
-});
-
-mobMenuLink.forEach(elem => {
-  elem.addEventListener('click', () => {
-    modalMenu.classList.remove('is-open');
-    body.classList.remove('modal-is-open');
-  });
-});
-
-mobMenuBtn.addEventListener('click', () => {
-  modalMenu.classList.remove('is-open');
-  body.classList.remove('modal-is-open');
 });
 
 dropdownBtn.addEventListener('click', () => {
