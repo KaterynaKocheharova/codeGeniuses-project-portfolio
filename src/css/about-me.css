@@ -55,7 +55,7 @@
   border-radius: 24px;
 }
 
-/* -----------------Accordion-------------------- */
+/* ==================================================== ACCORDION */
 
 .about-me-accordion-section {
   padding-top: 20px;
@@ -155,7 +155,7 @@
   transform: rotate(180deg);
 }
 
-/* -----------------Swiper-------------------- */
+/* ======================================== SWIPER */
 
 .about-me-swiper-section {
   display: flex;
@@ -223,7 +223,7 @@
   display: block;
 }
 
-/* -----------------Adaptive-------------------- */
+/* ================================= ADAPTIVE TABLET */
 
 @media screen and (min-width: 768px) {
   .about-me-section {
@@ -285,6 +285,8 @@
     margin-left: 0;
   }
 }
+
+/* ======================== ADAPTIVE DESKTOP */
 
 @media screen and (min-width: 1440px) {
   .about-me-section {
