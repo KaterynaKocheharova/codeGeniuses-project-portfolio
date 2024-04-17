@@ -6,7 +6,7 @@ const form = document.querySelector('.form-section');
 const modal = document.querySelector('.backdrop');
 const closeBtn = document.querySelector('.close-btn');
 
-form.addEventListener('submit', handleFormSubmit, { passive: true });
+form.addEventListener('submit', handleFormSubmit);
 
 async function handleFormSubmit(event) {
   event.preventDefault();
