@@ -42,7 +42,6 @@
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .work-together-section {
-    padding-top: 125px;
     background-image: url(../img/work-together/desktop/together-background-desktop-2x.png);
   }
 }
