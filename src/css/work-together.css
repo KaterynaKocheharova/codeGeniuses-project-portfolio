@@ -1,5 +1,5 @@
 .work-together-section {
-  padding-top: 48px;
+  /* padding-top: 48px; */
   padding-bottom: 32px;
   background-image: url(../img/work-together/mobile/work-together-background-mobile-1x.png);
   background-repeat: no-repeat;
@@ -11,21 +11,19 @@
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .work-together-section {
-    padding-top: 48px;
-    padding-bottom: 32px;
     background-image: url(../img/work-together/mobile/work-together-background-mobile-2x.png);
   }
 }
 
 @media screen and (min-width: 768px) {
   .work-together-section {
-    padding-top: 91px;
+    /* padding-top: 91px; */
     padding-bottom: 169px;
     background-image: url(../img/work-together/tablet/work-together-bakcground-tablet-1x.png);
   }
 }
 
-@media (min-width: 768px),
+@media screen and (min-width: 768px),
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .work-together-section {
@@ -35,7 +33,7 @@
 
 @media screen and (min-width: 1440px) {
   .work-together-section {
-    padding-top: 125px;
+    /* padding-top: 125px; */
     background-image: url(../img/work-together/desktop/work-together-background-desktop-1x.png);
   }
 }
