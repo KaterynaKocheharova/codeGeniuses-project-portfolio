@@ -24,7 +24,7 @@ async function onCreateReview() {
   } catch (error) {
     iziToast.show({
       titleLineHeight: '1.2',
-      message: 'Sorry. You cannot see reviews right now',
+      message: `Sorry. You cannot see reviews right now because of this error:${error}`,
       messageSize: '50px',
       messageColor: '#ed3b44',
       backgroundColor: 'black',

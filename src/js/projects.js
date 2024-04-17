@@ -20,4 +20,5 @@ let params = {
     prevEl: '.custom-swiper-btn-prev',
   },
 };
+
 new Swiper('.swiper-container', params);
