@@ -1,15 +1,15 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
+import SwiperAbout from 'swiper';
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+
 new Accordion('.accordion-container', {
   duration: 600,
   showMultiple: false,
   openOnInit: [0],
 });
-
-import SwiperAbout from 'swiper';
-import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
-import 'swiper/css';
 
 let parametrs = {
   modules: [Navigation, Mousewheel, Keyboard],
