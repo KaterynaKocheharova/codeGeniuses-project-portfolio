@@ -11,7 +11,7 @@ const body = document.querySelector('body');
 
 // ======================= OPEN MODAL
 
-headerBurger.addEventListener('click', openModal);
+headerBurger.addEventListener('click', openModal, { passive: true });
 
 function openModal(e) {
   e.preventDefault();
@@ -21,13 +21,13 @@ function openModal(e) {
 
 // ======================= CLOSE MODAL
 
-closeBtn.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal, { passive: true });
 
 mobMenuLink.forEach(elem => {
-  elem.addEventListener('click', linksCloseModal);
+  elem.addEventListener('click', linksCloseModal, { passive: true });
 });
 
-mobMenuBtn.addEventListener('click', linksCloseModal);
+mobMenuBtn.addEventListener('click', linksCloseModal, { passive: true });
 
 function closeModal(e) {
   e.preventDefault();

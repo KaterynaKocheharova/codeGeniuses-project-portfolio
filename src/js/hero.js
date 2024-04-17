@@ -1,7 +1,10 @@
 const heroTitle = document.querySelector('.hero-title');
 
-document.addEventListener('DOMContentLoaded', animateOnScroll);
-window.addEventListener('scroll', animateOnScroll);
+document.addEventListener('DOMContentLoaded', animateOnScroll, {
+  passive: true,
+});
+
+window.addEventListener('scroll', animateOnScroll, { passive: true });
 
 function animateOnScroll() {
   const rect = heroTitle.getBoundingClientRect();
