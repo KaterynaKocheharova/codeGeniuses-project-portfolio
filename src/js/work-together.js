@@ -6,6 +6,8 @@ const form = document.querySelector('.form-section');
 const modal = document.querySelector('.backdrop');
 const closeBtn = document.querySelector('.close-btn');
 
+// ============================ FORM GENERAL
+
 form.addEventListener('submit', handleFormSubmit);
 
 async function handleFormSubmit(event) {
@@ -32,6 +34,8 @@ async function handleFormSubmit(event) {
     });
   }
 }
+
+// ================== MODAL WINDOW
 
 function openModal() {
   modal.classList.remove('hidden');
@@ -60,6 +64,8 @@ function closeModalOnEscape(event) {
     closeModal();
   }
 }
+
+// ================ FORM VALIDATION MESSAGES
 
 const emailInput = document.querySelector('input[name="email"]');
 const commentInput = document.querySelector('input[name="comment"]');
