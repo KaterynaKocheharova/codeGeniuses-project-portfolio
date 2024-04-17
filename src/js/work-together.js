@@ -1,4 +1,4 @@
-import { sendInfo } from './api';
+import { sendInfo } from './API';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
