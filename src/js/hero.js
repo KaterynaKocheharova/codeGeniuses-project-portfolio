@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', animateOnScroll, {
   passive: true,
 });
 
-window.addEventListener('scroll', animateOnScroll, { passive: true });
+window.addEventListener('scroll', animateOnScroll);
 
 function animateOnScroll() {
   const rect = heroTitle.getBoundingClientRect();
