@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { getReviews } from './API';
+import { getReviews } from './api';
 
 import Swiper from 'swiper';
 import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
