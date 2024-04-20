@@ -9,7 +9,7 @@ import 'swiper/css';
 
 new Accordion('.accordion-container', {
   duration: 600,
-  showMultiple: false,
+  showMultiple: true,
   openOnInit: [0],
 });
 
