@@ -27,9 +27,8 @@
   overflow-y: auto;
 }
 
-.reviews-item:nth-child(5) {
-  padding-top: 15px;
-  padding-bottom: 10px;
+.reviews-item::-webkit-scrollbar {
+  display: none;
 }
 
 .reviews-image {
