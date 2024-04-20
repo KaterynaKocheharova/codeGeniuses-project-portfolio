@@ -117,13 +117,13 @@
 .hero-social-list-item {
   box-sizing: border-box;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
+  border-radius: 50%;
   width: 37px;
   height: 37px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 8px;
+
   transition: border 250ms linear, color 250ms linear;
 }
 
@@ -131,13 +131,6 @@
   .hero-social-list-item {
     width: 55px;
     height: 55px;
-    padding: 18px 16px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .hero-social-list-item {
-    padding: 18px 20px;
   }
 }
 
@@ -147,6 +140,12 @@
 }
 
 .hero-social-social-list-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2em;
@@ -156,18 +155,24 @@
 @media screen and (min-width: 768px) {
   .hero-social-social-list-link {
     font-size: 16px;
+    padding: 18px 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-social-social-list-link {
+    padding: 18px 20px;
   }
 }
 
 .email {
+  border-radius: 60px;
   width: 181px;
-  padding: 10px 10px;
 }
 
 @media screen and (min-width: 375px) {
   .email {
     width: 223px;
-    padding: 15px 17px;
   }
 }
 
@@ -186,5 +191,6 @@
 @media screen and (min-width: 768px) {
   .email-link {
     font-size: 16px;
+    padding: 18px 24px;
   }
 }
