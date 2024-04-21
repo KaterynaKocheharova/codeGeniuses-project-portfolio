@@ -5,5 +5,3 @@ import './js/projects';
 import './js/FAQ';
 import './js/reviews';
 import './js/work-together';
-import './js/about-me'
-import './js/covers'

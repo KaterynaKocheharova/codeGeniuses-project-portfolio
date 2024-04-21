@@ -128,10 +128,6 @@
   justify-content: center;
   width: 282px;
   white-space: nowrap;
-
-}
-
-.show {
   animation-name: filmLine;
   animation-duration: 9s;
   animation-timing-function: ease-in-out;
