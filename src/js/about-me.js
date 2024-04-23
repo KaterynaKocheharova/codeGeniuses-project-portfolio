@@ -7,12 +7,6 @@ import 'swiper/css';
 
 // =============== ACCORDION
 
-new Accordion('.accordion-container', {
-  duration: 600,
-  showMultiple: true,
-  openOnInit: [0],
-});
-
 // ============== SWIPER
 
 let parametrs = {
