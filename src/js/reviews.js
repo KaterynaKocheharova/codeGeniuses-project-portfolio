@@ -1,13 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
+import { initSwiper } from './swiper';
 import { getReviews } from './API';
-
-import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 
@@ -60,31 +54,3 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
 }
 
 // ========================== SWIPER
-
-function initSwiper() {
-  let params = {
-    modules: [Navigation, Keyboard],
-    spaceBetween: 16,
-    loop: false,
-    direction: 'horizontal',
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1440: {
-        slidesPerView: 4,
-      },
-    },
-
-    navigation: {
-      nextEl: '.custom-swiper-btn-next',
-      prevEl: '.custom-swiper-btn-prev',
-    },
-  };
-  new Swiper('.reviews-swiper-container', params);
-}
