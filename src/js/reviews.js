@@ -52,5 +52,3 @@ function reviewTemplate({ _id, author, avatar_url, review }) {
       </li>
   `;
 }
-
-// ========================== SWIPER
