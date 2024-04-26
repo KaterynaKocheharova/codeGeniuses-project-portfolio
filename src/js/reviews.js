@@ -14,7 +14,8 @@ async function onCreateReview() {
     reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
     initSwiper();
   } catch (error) {
-    showMessage(`Sorry. No reviews found now. The error: ${error}`);
+    showMessage('Sorry. No reviews found now');
+    console.error(error);
     reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
   }
 }

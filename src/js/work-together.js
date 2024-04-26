@@ -1,64 +1,58 @@
 import { sendInfo } from './API';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import { showMessage } from './izitoast';
 
-const form = document.querySelector('.form-section');
-const modal = document.querySelector('.backdrop');
-const closeBtn = document.querySelector('.close-btn');
+// ============================ VARIABLES
+const workTogetherForm = document.querySelector('.work-together-form');
+const workTogetherModal = document.querySelector('.work-together-backdrop');
+const workTogetherCloseBtn = document.querySelector('.work-together-close-btn');
 
 // ============================ FORM POST REQUEST
-
-form.addEventListener('submit', handleFormSubmit);
-
-async function handleFormSubmit(event) {
+async function onFormSubmit(event) {
   event.preventDefault();
   const user = {
     email: event.currentTarget.elements.email.value,
     comment: event.currentTarget.elements.comment.value,
   };
-
   try {
     const data = await sendInfo(user);
     openModal();
-    form.reset();
+    workTogetherForm.reset();
   } catch (error) {
-    iziToast.show({
-      titleLineHeight: '1.2',
-      maxWidth: 500,
-      message: `Sorry. ${error}. You filled in the inputs incorrectly or there's a server mistake`,
-      messageSize: '50px',
-      messageColor: '#ed3b44',
-      backgroundColor: 'black',
-      position: 'topRight',
-      closeOnClick: true,
-    });
+    showMessage(
+      'You might have filled in the inputs incorrectly. Or try again later.'
+    );
+    console.error(error);
   }
 }
 
-// ========================== MODAL
+workTogetherForm.addEventListener('submit', onFormSubmit);
 
+// ========================== OPEN MODAL
 function openModal() {
-  modal.classList.remove('hidden');
+  workTogetherModal.classList.remove('hidden');
   document.body.classList.add('modal-is-open');
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', closeModalOnBackdrop);
+  workTogetherCloseBtn.addEventListener('click', closeModal);
+  workTogetherModal.addEventListener('click', closeModalOnBackdrop);
   window.addEventListener('keydown', closeModalOnEscape);
 }
 
+// ========================= CLOSE MODAL
 function closeModal() {
-  modal.classList.add('hidden');
+  workTogetherModal.classList.add('hidden');
+  workTogetherModal.removeEventListener('click', closeModalOnBackdrop);
   document.body.classList.remove('modal-is-open');
-  closeBtn.removeEventListener('click', closeModal);
-  modal.removeEventListener('click', closeModalOnBackdrop);
   document.removeEventListener('keydown', closeModalOnEscape);
+  workTogetherCloseBtn.removeEventListener('click', closeModal);
 }
 
+// ======================== CLOSE MODAL ON BACKDROP
 function closeModalOnBackdrop(event) {
-  if (event.target === modal) {
+  if (event.target === workTogetherModal) {
     closeModal();
   }
 }
 
+// ======================== CLOSE MODAL ON ESCAPE
 function closeModalOnEscape(event) {
   if (event.key === 'Escape') {
     closeModal();
@@ -66,7 +60,6 @@ function closeModalOnEscape(event) {
 }
 
 // =========================== FORM VALIDATION
-
 const emailInput = document.querySelector('input[name="email"]');
 const commentInput = document.querySelector('input[name="comment"]');
 const success = document.querySelector('.success-text');

@@ -42,7 +42,7 @@
   }
 }
 
-.form-section {
+.work-together-form {
   margin-bottom: 64px;
 }
 
@@ -214,7 +214,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .form-section {
+  .work-together-form {
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -282,7 +282,7 @@
     width: 385px;
   }
 
-  .form-section {
+  .work-together-form {
     gap: 86px;
   }
 }
