@@ -1,13 +1,7 @@
+// ========================= HERO VARIABLES
 const heroTitle = document.querySelector('.hero-title');
 
 // ========================= SMOOTH APPEARING ON SCROLL
-
-document.addEventListener('DOMContentLoaded', animateOnScroll, {
-  passive: true,
-});
-
-window.addEventListener('scroll', animateOnScroll);
-
 function animateOnScroll() {
   const rect = heroTitle.getBoundingClientRect();
   const viewHeight = Math.max(
@@ -21,3 +15,8 @@ function animateOnScroll() {
     heroTitle.classList.remove('show');
   }
 }
+
+document.addEventListener('DOMContentLoaded', animateOnScroll, {
+  passive: true,
+});
+window.addEventListener('scroll', animateOnScroll);

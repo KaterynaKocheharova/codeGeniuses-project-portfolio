@@ -1,12 +1,11 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 import { initSwiper } from './swiper';
 import { getReviews } from './API';
+import { showMessage } from './izitoast';
 
+// ===================== VARIABLES
 const reviewsList = document.querySelector('.reviews-swiper-wrapper');
 
 // ===================== GETTING REVIEWS FROM BACKEND
-
 onCreateReview();
 async function onCreateReview() {
   try {
@@ -15,21 +14,12 @@ async function onCreateReview() {
     reviewsList.insertAdjacentHTML('afterbegin', reviewsMarkup);
     initSwiper();
   } catch (error) {
-    iziToast.show({
-      titleLineHeight: '1.2',
-      message: `Sorry. You cannot see reviews right now because of this error:${error}`,
-      messageSize: '50px',
-      messageColor: '#ed3b44',
-      backgroundColor: 'black',
-      position: 'topRight',
-      closeOnClick: true,
-    });
+    showMessage(`Sorry. No reviews found now. The error: ${error}`);
     reviewsList.insertAdjacentHTML('afterbegin', 'No reviews found');
   }
 }
 
 // ==================== RENDERING REVIEWS
-
 function reviewsTemplate(arr) {
   return arr.map(reviewTemplate).join('');
 }
