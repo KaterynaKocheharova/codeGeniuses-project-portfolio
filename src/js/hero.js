@@ -1,7 +1,7 @@
 // ========================= HERO VARIABLES
 const heroTitle = document.querySelector('.hero-title');
 
-// ========================= SMOOTH APPEARING ON SCROLL
+// ========================= TITLE SMOOTH APPEARING ON SCROLL
 function animateOnScroll() {
   const rect = heroTitle.getBoundingClientRect();
   const viewHeight = Math.max(
