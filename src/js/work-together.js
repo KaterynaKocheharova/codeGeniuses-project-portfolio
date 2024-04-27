@@ -1,10 +1,16 @@
 import { sendInfo } from './API';
 import { showMessage } from './izitoast';
 
-// ============================ VARIABLES
+// =========================== MODAL VARIABLES
 const workTogetherForm = document.querySelector('.work-together-form');
 const workTogetherModal = document.querySelector('.work-together-backdrop');
 const workTogetherCloseBtn = document.querySelector('.work-together-close-btn');
+
+// =========================== FORM VALIDATION VARIABLES
+const emailInput = document.querySelector('input[name="email"]');
+const commentInput = document.querySelector('input[name="comment"]');
+const success = document.querySelector('.success-text');
+const error = document.querySelector('.error-text');
 
 // ============================ FORM POST REQUEST
 async function onFormSubmit(event) {
@@ -17,6 +23,7 @@ async function onFormSubmit(event) {
     const data = await sendInfo(user);
     openModal();
     workTogetherForm.reset();
+    hideMessages();
   } catch (error) {
     showMessage(
       'You might have filled in the inputs incorrectly. Or try again later.'
@@ -59,12 +66,7 @@ function closeModalOnEscape(event) {
   }
 }
 
-// =========================== FORM VALIDATION
-const emailInput = document.querySelector('input[name="email"]');
-const commentInput = document.querySelector('input[name="comment"]');
-const success = document.querySelector('.success-text');
-const error = document.querySelector('.error-text');
-
+// ======================= FORM VALIDATION FUNCTIONS
 function showSuccess() {
   success.classList.remove('visually-hidden');
   error.classList.add('visually-hidden');
@@ -80,30 +82,14 @@ function hideMessages() {
   error.classList.add('visually-hidden');
 }
 
-commentInput.addEventListener('click', () => {
+function displayEmailValidationMassage() {
   if (emailInput.validity.valid) {
     showSuccess();
   } else {
     showError();
   }
-});
-
-function clearInputClassesAndText() {
-  emailInput.classList.remove('success');
-  emailInput.classList.remove('error');
-  hideMessages();
 }
 
-emailInput.addEventListener('click', () => {
-  hideMessages();
-});
-
-emailInput.addEventListener('input', function () {
-  if (this.validity.valid) {
-    this.classList.remove('error');
-    this.classList.add('success');
-  } else {
-    this.classList.remove('success');
-    this.classList.add('error');
-  }
-});
+commentInput.addEventListener('click', displayEmailValidationMassage);
+emailInput.addEventListener('click', hideMessages);
+emailInput.addEventListener('input', displayEmailValidationMassage);
