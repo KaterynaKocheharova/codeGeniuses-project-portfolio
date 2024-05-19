@@ -19,6 +19,10 @@ async function onFormSubmit(event) {
     email: event.currentTarget.elements.email.value,
     comment: event.currentTarget.elements.comment.value,
   };
+  if (!user.email || !user.comment) {
+    showMessage('All fields must be filled in ');
+    return;
+  }
   try {
     const data = await sendInfo(user);
     openModal();
@@ -26,7 +30,7 @@ async function onFormSubmit(event) {
     hideMessages();
   } catch (error) {
     showMessage(
-      'You might have filled in the inputs incorrectly. Or try again later.'
+      'Oops. Something went wrong! You might have filled inputs incorrectly or there is an internet issue. Try again later '
     );
     console.error(error);
   }
